@@ -50,6 +50,7 @@ The site simulates a webpage in which the users can do the following:
 - They can also proceed to the "purchase" page in which they can simulate to purchase the products available in the webpage. No actual payment/checkout is generated in the website.
 - After every "purchase" an order number will be provided to the user that can be reviewed in their profile for further information about their purchase.
 - The site uses cookies to keep the session open for the user.
+- All prices are updated on page render since they are feteched from the database to always makesure that the prices matches the ones in the database.
 
 ## Backend server
 
