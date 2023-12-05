@@ -164,7 +164,7 @@ const Products = (props) => {
                                                 />
                                             </svg>
                                             <span className="ms-5 text-white" >
-                                                CPU Snapdragon 8 Gen 2
+                                                CPU Snapdragon 8 Gen 1
                                             </span>
                                         </li>
                                         <li className="d-flex align-items-center mb-5">
@@ -182,7 +182,7 @@ const Products = (props) => {
                                                 />
                                             </svg>
                                             <span className="ms-5 text-white" >
-                                                256 GB Storage
+                                                128 GB Storage
                                             </span>
                                         </li>
                                         <li className="d-flex align-items-center mb-5 me-8 me-md-12">
@@ -200,7 +200,7 @@ const Products = (props) => {
                                                 />
                                             </svg>
                                             <span className="ms-5 text-white" >
-                                                8 GB RAM
+                                                6 GB RAM
                                             </span>
                                         </li>
                                     </ul>
