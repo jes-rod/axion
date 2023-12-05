@@ -7,7 +7,7 @@ const Footer = (props) => {
            <section className="bg-secondary-dark py-24">
                 <div className="container">
                     <div className="text-center pb-20 mb-12 border-bottom border-secondary">
-                        <a className="d-inline-block" href="#">
+                        <a className="d-inline-block" href="/">
                             <img
                                 className="img-fluid"
                                 src="images/Screenshot-2023-10-03-9-52-02-AM-removebg-preview.png"
@@ -19,7 +19,7 @@ const Footer = (props) => {
                         <div className="d-flex mt-20 justify-content-center">
                             <a
                                 className="d-flex me-4 justify-content-center align-items-center bg-secondary rounded-circle"
-                                href="#"
+                                href="/"
                                 style={{ width: 48, height: 48 }}
                             >
                                 <svg
@@ -44,7 +44,7 @@ const Footer = (props) => {
                             </a>
                             <a
                                 className="d-flex me-4 justify-content-center align-items-center bg-secondary rounded-circle"
-                                href="#"
+                                href="/"
                                 style={{ width: 48, height: 48 }}
                             >
                                 <svg
@@ -73,7 +73,7 @@ const Footer = (props) => {
                             </a>
                             <a
                                 className="d-flex justify-content-center align-items-center bg-secondary rounded-circle"
-                                href="#"
+                                href="/"
                                 style={{ width: 48, height: 48 }}
                             >
                                 <svg

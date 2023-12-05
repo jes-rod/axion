@@ -1,9 +1,4 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import { profile } from '../../api/api';
-import Cookies from 'universal-cookie';
-const cookies = new Cookies()
+import React from 'react';
 
 const ShowProfile = (props) => {
 
