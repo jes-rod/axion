@@ -1,0 +1,9 @@
+.new-primary {
+  background-color: #133c76
+}
+.signin,
+.signup {
+  background-image: url("../images/pngtree-smartphone-with-a-dark-screen-and-a-futuristic-interface-picture-image-2683165.jpg");
+  background-size: cover;
+}
+
