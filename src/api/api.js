@@ -4,7 +4,7 @@ import axios from 'axios';
 const signUp = async (details) => {
   const {fullName, email, password } = details;
   try {
-    const response = await axios.post('http://localhost:8000/register', {
+    const response = await axios.post('https://axion-backend.vercel.app/register', {
         user: {
           fullName,
           email,
@@ -22,7 +22,7 @@ const signUp = async (details) => {
 const products = async () => {
 
   try {
-    const response = await axios.get('http://localhost:8000/products');
+    const response = await axios.get('https://axion-backend.vercel.app/products');
     return response.data;
   }catch(err){
     return err.response.data;
@@ -32,7 +32,7 @@ const products = async () => {
 const login = async (details) => {
   const {email, password} = details;
   try {
-    const response = await axios.post('http://localhost:8000/login', {
+    const response = await axios.post('https://axion-backend.vercel.app/login', {
       user: {
           email: email,
           password: password
@@ -47,7 +47,7 @@ const login = async (details) => {
 const update = async (details) => {
   const {name, email, password, phone, address} = details;
   try {
-    const response = await axios.post('http://localhost:8000/update', {
+    const response = await axios.post('https://axion-backend.vercel.app/update', {
       user: {
           name: name,
           email: email,
@@ -64,7 +64,7 @@ const update = async (details) => {
 
 const profile = async (email) => {
   try {
-    const response = await axios.post('http://localhost:8000/profile', {
+    const response = await axios.post('https://axion-backend.vercel.app/profile', {
       user: {
           email: email
         }
@@ -136,20 +136,4 @@ const getOrder = async (id) => {
 }
 
 
-const auth = async (token) => {
-  const configuration = {
-      method: "get",
-      url: "https://loginbackend-phi.vercel.app/secret",
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    };
-  try{
-    const response = await axios(configuration);
-    return response.data;
-  }catch (err){
-    return err.message;
-  }
-}
-
-export {login, signUp, auth, update, checkPassword, profile, products, addOrder, getOrders, getOrder};
+export {login, signUp, update, checkPassword, profile, products, addOrder, getOrders, getOrder};
