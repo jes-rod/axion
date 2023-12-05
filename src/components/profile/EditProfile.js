@@ -145,7 +145,7 @@ const EditProfile = (props) => {
                             <button className="btn btn-secondary btn-sm" type="submit" onClick={handleSubmit}>Save changes</button>
                         </div>
                         <div className="col-sm-4">
-                            <button className="btn btn-secondary-light btn-sm" type='submit' onClick={handleCancel}>Cancel</button>
+                            <button id ="cancelBtn" className="btn btn-secondary-light btn-sm" type='submit' onClick={handleCancel}>Cancel</button>
                         </div>
                     </div>
                 </form>
