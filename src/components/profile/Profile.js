@@ -33,7 +33,7 @@ const Profile = (props) => {
     const showOrders = () => {
         if(orders.length > 0){
            return orders.map((order) => {
-            return <input type="text" key={order.orderID} onClick={handleOrder} style={{cursor: "pointer", outline: "none", border: "none"}} value={order.orderID} readOnly/>
+            return <input type="text" className="col-9" key={order.orderID} onClick={handleOrder} style={{cursor: "pointer", outline: "none", border: "none"}} value={order.orderID} readOnly/>
            })
         }
     }
