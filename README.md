@@ -1,70 +1,67 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# AXION - MERN App
 
-## Available Scripts
+AXION is a webpage for a fictitious smartphone selling company created as a portfolio app for my profile.
 
-In the project directory, you can run:
 
-### `npm start`
+## Authors
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [@jes-rod](https://github.com/jes-rod)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Languages, frameworks, libraries used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
+- Javascript
+- React
+  - State hooks
+  - API calls
+- Axios
+- uuidv4
+- HTML
+- CSS
+- Bootstrap
 
-### `npm run build`
+### Backend
+- Node.js
+- Express.js
+- CORS
+- bcrypt
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Database
+- MongoDB
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Environment Variables
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+If you want to run this project on your own, you will need to add the following environment variables to your .env file in your backend project
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`DB_URL`
+`SALT`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Page description
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The site simulates a webpage in which the users can do the following:
+- Navigate through the "home" and "products" page to review all the phones specifications and general information about the page.
+- Register themselves as users.
+- Login with their already created credentials so they can ahve access to the "profile" and "purchase" pages of their account.
+- By login in, they can see their profile in which they can update their personal information as well as their email address and password.
+- They can also proceed to the "purchase" page in which they can simulate to purchase the products available in the webpage. No actual payment/checkout is generated in the website.
+- After every "purchase" an order number will be provided to the user that can be reviewed in their profile for further information about their purchase.
+- The site uses cookies to keep the session open for the user.
+- All prices are updated on page render since they are feteched from the database to always makesure that the prices matches the ones in the database.
 
-## Learn More
+## Backend server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can view the backend server specifications in the following repo: [AXION Backend](https://github.com/jes-rod/axion-backend)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Live version
 
-### Code Splitting
+You can use the app with the following link : [AXION](https://axion-jasrod.netlify.app)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Feedback
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+If you have any feedback, feel free to let me know to me at [@jes-rod](https://github.com/jes-rod) or by comment on this repo.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
