@@ -200,7 +200,7 @@ const Products = (props) => {
                                                 />
                                             </svg>
                                             <span className="ms-5 text-white" >
-                                                8 GB RAM
+                                                6 GB RAM
                                             </span>
                                         </li>
                                     </ul>
