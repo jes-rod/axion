@@ -222,14 +222,14 @@ const Signup = (props) => {
                                             <span>By signing up, you agree to our</span>
                                             <a
                                                 className="d-inline-block text-decoration text-white"
-                                                href="#"
+                                                href="/"
                                             >
                                                 Terms, Data Policy
                                             </a>
                                             <span> and </span>
                                             <a
                                                 className="d-inline-block text-decoration text-white"
-                                                href="#"
+                                                href="/"
                                             >
                                                 Cookies.
                                             </a>

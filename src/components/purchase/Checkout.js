@@ -45,6 +45,7 @@ const Checkout = (props) => {
 
     useLayoutEffect(() => {
         getProducts();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const cc_format = (value) => {
@@ -66,11 +67,11 @@ const Checkout = (props) => {
         const preTotal = (Math.round(((xsPrice * xsQuantity) + (xsuPrice * xsuQuantity)) * 100) / 100).toFixed(2);
         setSubTotal(preTotal);
         setTotal((Math.round((preTotal * 1.2) * 100) / 100).toFixed(2));
-    })
+    },[xsPrice, xsQuantity, xsuPrice, xsuQuantity])
 
     const handleSubmit = async (e) => {
 
-        if (total == 0) {
+        if (total <= 0) {
             setAlertMessage("Please select the quantity of the items you want to purchase")
         } else if (!name) {
             setAlertMessage("Please enter the card holder name");
@@ -94,9 +95,9 @@ const Checkout = (props) => {
             const arrival = new Date(currentDate + (10 * (24 * 60 * 60 * 1000))).toLocaleString("en-US");
             const orderID = uuidv4();
             let products = "";
-            if (xsuQuantity > 0) products = products + "AXION XS ULTRA " + "(" + xsuQuantity + " units)";
-            if (xsQuantity > 0 && products) products = products + ", AXION XS " + "(" + xsQuantity + " units)";
-            if (xsQuantity > 0 && !products) products = products + "AXION XS " + "(" + xsQuantity + " units)";
+            if (xsuQuantity > 0) products = `${products}AXION XS ULTRA (${xsuQuantity} units)`;
+            if (xsQuantity > 0 && products) products = `${products}, AXION XS (${xsQuantity} units)`;
+            if (xsQuantity > 0 && !products) products = `${products}AXION XS (${xsQuantity} units)`
             const order = {
                 orderID,
                 email,
