@@ -78,7 +78,7 @@ const profile = async (email) => {
 const checkPassword = async (details) => {
   const {email, password} = details;
   try {
-    const response = await axios.post("http://localhost:8000/password", {
+    const response = await axios.post("https://axion-backend.vercel.app/password", {
       user: {
         email: email,
         password: password,
@@ -93,7 +93,7 @@ const checkPassword = async (details) => {
 const addOrder = async (order) => {
   const {orderID, email, products, address, arrival, totalCost} = order;
   try {
-    const response = await axios.post("http://localhost:8000/placeOrder", {
+    const response = await axios.post("https://axion-backend.vercel.app/placeOrder", {
       order: {
         orderID,
         email,
@@ -111,7 +111,7 @@ const addOrder = async (order) => {
 
 const getOrders = async (email) => {
   try {
-    const response = await axios.post("http://localhost:8000/orders", {
+    const response = await axios.post("https://axion-backend.vercel.app/orders", {
       user: {
         email,
       }
@@ -124,7 +124,7 @@ const getOrders = async (email) => {
 
 const getOrder = async (id) => {
   try {
-    const response = await axios.post("http://localhost:8000/order", {
+    const response = await axios.post("https://axion-backend.vercel.app/order", {
       order: {
         id,
       }
