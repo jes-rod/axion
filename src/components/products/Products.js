@@ -7,6 +7,7 @@ import { products } from '../../api/api';
 const Products = (props) => {
 
     const [prices, setPrices] = useState({});
+    const [loadingFlag, setLoadingFlag] = useState(true);
 
     const getProducts = async () => {
         const response = await products();
@@ -14,6 +15,7 @@ const Products = (props) => {
             xsu: response[0].price,
             xs: response[1].price
         })
+        setLoadingFlag(false);
     }
 
     useLayoutEffect(() => {
@@ -23,6 +25,12 @@ const Products = (props) => {
     return (
         <div className="products">
             <Navbar />
+            {
+                loadingFlag &&
+                <div id="loading" className="bg-secondary-dark text-center">
+                    <img alt="loading icon" className="h3 text-white p-5" height="100" src="https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca.gif" />
+                </div>
+            }
             <section className="pt-32 pb-40 bg-secondary-dark">
                 <div className="container mx-auto" >
                     <div className="text-center mb-24" >
