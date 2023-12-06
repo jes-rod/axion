@@ -78,7 +78,7 @@ const EditProfile = (props) => {
                 <form className="card-body">
                     <div className="row">
                         <div className="col-sm-3">
-                            <p className="mb-0">Full Name</p>
+                            <p className="mb-0 fw-bold">Full Name</p>
                         </div>
                         <div className="col-sm-9">
                             <input type='text' className="text-muted mb-0" placeholder='Enter full name' onChange={(e) => setName(e.target.value)}/>
@@ -87,7 +87,7 @@ const EditProfile = (props) => {
                     <hr />
                     <div className="row">
                         <div className="col-sm-3">
-                            <p className="mb-0">Email</p>
+                            <p className="mb-0 fw-bold">Email</p>
                         </div>
                         <div className="col-sm-9">
                             <input type='text' className="text-muted mb-0" placeholder='Enter email address' onChange={(e) => setEmail(e.target.value)}/>
@@ -96,7 +96,7 @@ const EditProfile = (props) => {
                     <hr />
                     <div className="row">
                         <div className="col-sm-3">
-                            <p className="mb-0">Password</p>
+                            <p className="mb-0 fw-bold">Password</p>
                         </div>
                         <div className="col-sm-3">
                             <input id="oldpassword" type='password' className="text-muted mb-0 col-sm-12" placeholder='Old password' onChange={(e) => setOldPassword(e.target.value)}/>
@@ -114,7 +114,7 @@ const EditProfile = (props) => {
                     <hr />
                     <div className="row">
                         <div className="col-sm-3">
-                            <p className="mb-0">Phone</p>
+                            <p className="mb-0 fw-bold">Phone</p>
                         </div>
                         <div className="col-sm-9">
                             <input type='text' className="text-muted mb-0" placeholder='Enter your phone number' onChange={(e) => setPhone(e.target.value)}/>
@@ -123,7 +123,7 @@ const EditProfile = (props) => {
                     <hr />
                     <div className="row">
                         <div className="col-sm-3">
-                            <p className="mb-0">Address</p>
+                            <p className="mb-0 fw-bold">Address</p>
                         </div>
                         <div className="col-sm-9">
                             <input type='text' className="text-muted mb-0" placeholder='Enter your address' onChange={(e) => setAddress(e.target.value)}/>
