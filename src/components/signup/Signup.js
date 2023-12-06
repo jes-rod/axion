@@ -3,6 +3,7 @@ import { useState } from 'react';
 import EyeClosed from '../global/EyeClosed';
 import EyeOpen from '../global/EyeOpen';
 import { signUp } from '../../api/api';
+import Navbar from '../global/Navbar';
 
 
 const Signup = (props) => {
@@ -64,6 +65,7 @@ const Signup = (props) => {
 
     return (
         <div className="signup">
+            <Navbar />
             <section className="position-relative bg-secondary-dark py-24 py-md-40 overflow-hidden">
                 <div className="container position-relative">
                     <div className="row align-items-center signup">

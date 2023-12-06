@@ -14,7 +14,7 @@ const ShowProfile = (props) => {
                 <div  className="card-body">
                     <div className="row">
                         <div className="col-sm-3">
-                            <p className="mb-0">Full Name</p>
+                            <p className="mb-0 fw-bold">Full Name</p>
                         </div>
                         <div className="col-sm-9">
                             <p className="text-muted mb-0">{user.name}</p>
@@ -23,7 +23,7 @@ const ShowProfile = (props) => {
                     <hr />
                     <div className="row">
                         <div className="col-sm-3">
-                            <p className="mb-0">Email</p>
+                            <p className="mb-0 fw-bold">Email</p>
                         </div>
                         <div className="col-sm-9">
                             <p className="text-muted mb-0">{user.email}</p>
@@ -32,7 +32,7 @@ const ShowProfile = (props) => {
                     <hr />
                     <div className="row">
                         <div className="col-sm-3">
-                            <p className="mb-0">Password</p>
+                            <p className="mb-0 fw-bold">Password</p>
                         </div>
                         <div className="col-sm-9">
                             <p className="text-muted mb-0"><em>Click "Edit profile" to change your password</em></p>
@@ -41,7 +41,7 @@ const ShowProfile = (props) => {
                     <hr />
                     <div className="row">
                         <div className="col-sm-3">
-                            <p className="mb-0">Phone</p>
+                            <p className="mb-0 fw-bold">Phone</p>
                         </div>
                         <div className="col-sm-9">
                             <p className="text-muted mb-0">{user.phone}</p>
@@ -50,7 +50,7 @@ const ShowProfile = (props) => {
                     <hr />
                     <div className="row">
                         <div className="col-sm-3">
-                            <p className="mb-0">Address</p>
+                            <p className="mb-0 fw-bold">Address</p>
                         </div>
                         <div className="col-sm-9">
                             <p className="text-muted mb-0">{user.address}</p>

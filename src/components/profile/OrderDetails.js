@@ -15,7 +15,7 @@ const OrderDetails = ({order}) => {
                             <h4 className="my-3 mb-10">Order {order.orderID}</h4>                      
                             <div className="row">
                                 <div className="col-sm-3">
-                                    <p className="mb-0">Items purchased</p>
+                                    <p className="mb-0 fw-bold">Items purchased</p>
                                 </div>
                                 <div className="col-sm-9">
                                     <p className="text-muted mb-0">{order.products}</p>
@@ -24,7 +24,7 @@ const OrderDetails = ({order}) => {
                             <hr />
                             <div className="row">
                                 <div className="col-sm-3">
-                                    <p className="mb-0">Delivery Address</p>
+                                    <p className="mb-0 fw-bold">Delivery Address</p>
                                 </div>
                                 <div className="col-sm-9">
                                     <p className="text-muted mb-0">{order.address}</p>
@@ -33,7 +33,7 @@ const OrderDetails = ({order}) => {
                             <hr />
                             <div className="row">
                                 <div className="col-sm-3">
-                                    <p className="mb-0">Estimated date of delivery</p>
+                                    <p className="mb-0 fw-bold">Estimated date of delivery</p>
                                 </div>
                                 <div className="col-sm-9">
                                     <p className="text-muted mb-0">{order.arrival.substring(0, order.arrival.indexOf(","))}</p>
@@ -42,7 +42,7 @@ const OrderDetails = ({order}) => {
                             <hr />
                             <div className="row">
                                 <div className="col-sm-3">
-                                    <p className="mb-0">Total</p>
+                                    <p className="mb-0 fw-bold">Total</p>
                                 </div>
                                 <div className="col-sm-9">
                                     <p className="text-muted mb-0">${order.totalCost}</p>

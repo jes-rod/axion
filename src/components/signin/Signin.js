@@ -4,6 +4,8 @@ import { login } from '../../api/api.js';
 import Cookies from 'universal-cookie';
 import EyeClosed from '../global/EyeClosed';
 import EyeOpen from '../global/EyeOpen';
+import Navbar from '../global/Navbar.js';
+
 const cookies = new Cookies();
 
 const Signin = (props) => {
@@ -49,6 +51,7 @@ const Signin = (props) => {
 
     return (
         <div className="signin">
+            <Navbar />
             <section className="position-relative bg-secondary-dark py-24 py-md-40 overflow-hidden">
                 <img
                     className="d-none d-lg-block position-absolute top-50 start-0 w-100 translate-middle-y img-fluid"

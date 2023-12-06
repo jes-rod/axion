@@ -152,9 +152,9 @@ const Navbar = (props) => {
                                 </li>
                                 <li className="nav-item" />
                                 <li className="nav-item">
-                                    <a className="nav-link py-5 ps-8 text-white" href="#specifications">
-                                        Features
-                                    </a>
+                                    <Link className="nav-link py-5 ps-8 text-white" to="/">
+                                        Home
+                                    </Link>
                                 </li>
                                 <li className="nav-item" />
                             </ul>
