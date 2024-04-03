@@ -1,0 +1,11 @@
+input::placeholder {
+    color: gray;
+    opacity: 0.50
+  }
+  
+  html {
+    height: 100%;
+    background-color: black;
+  }
+
+  

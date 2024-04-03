@@ -1,0 +1,14 @@
+html {
+  height: 100%;
+  background-color: black;
+}
+
+.new-primary {
+  background-color: #133c76
+}
+.signin,
+.signup {
+  background-image: url("../images/futurePhone.jpg");
+  background-size: cover;
+}
+
