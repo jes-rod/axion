@@ -3,7 +3,6 @@ import './Profile.css'
 import React, { useLayoutEffect } from 'react';
 import EditProfile from './EditProfile';
 import ShowProfile from './ShowProfile';
-import Image from 'next/image';
 import OrderDetails from './OrderDetails';
 import { useState } from 'react';
 import { useCookies } from 'next-client-cookies';
@@ -21,8 +20,11 @@ const Profile = () => {
     const [user, setUser] = useState({});
     const [loadingFlag, setLoadingFlag] = useState(true);
 
-    const handleEdit = (state) => {
+    const handleEdit = (state, flag) => {
         setEditProfile(state);
+        if(!flag){
+            fetchOrdersProfile();
+        }
     }
 
     const handleOrder = (e) => {

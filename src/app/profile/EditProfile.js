@@ -1,5 +1,6 @@
 'use client'
 import React, {useState} from 'react';
+import { useRouter } from 'next/navigation';
 import EyeClosed from '@/components/global/EyeClosed';
 import EyeOpen from '@/components/global/EyeOpen';
 import { useCookies } from 'next-client-cookies';
@@ -9,6 +10,7 @@ import { checkPassword, update } from '../api/api';
 
 const EditProfile = (props) => {
     const cookies = useCookies();
+    const router = useRouter();
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [address, setAddress] = useState('');
@@ -42,15 +44,14 @@ const EditProfile = (props) => {
             setAlertMessage(response.error.response.data);
             return;
         }
-        document.location.reload(true);
-        props.changeEdit(false);
+        props.changeEdit(false, false);
         return;
 
     }
 
     const handleCancel = (e) => {
         e.preventDefault();
-        props.changeEdit(false);
+        props.changeEdit(false, true);
     }
 
     const changeOldPassword = () => {

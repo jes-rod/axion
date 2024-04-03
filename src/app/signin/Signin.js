@@ -2,6 +2,7 @@
 import React from 'react';
 import "../../../public/css/main.css";
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { login } from '../api/api';
 import { useCookies } from 'next-client-cookies';
 import EyeClosed from '@/components/global/EyeClosed';
@@ -9,8 +10,10 @@ import EyeOpen from '@/components/global/EyeOpen';
 
 
 
+
 const Signin = () => {
     const cookies = useCookies();
+    const router = useRouter();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [viewPassword, setViewPassword] = useState(false);
@@ -34,7 +37,7 @@ const Signin = () => {
                 cookies.set("email", response.email, {
                     path: "/",
                   });
-                  document.location.reload(true);
+                  router.refresh();
             }
         }
     }

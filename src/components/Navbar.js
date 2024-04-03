@@ -3,10 +3,11 @@
 import React, {useEffect} from 'react';
 import Link from 'next/link';
 import { useCookies } from 'next-client-cookies';
+import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
     const cookies = useCookies();
-
+    const router = useRouter();
     const token = cookies.get("TOKEN");
 
     useEffect(() => {
@@ -69,7 +70,7 @@ const Navbar = () => {
 
     const logout = () => {
         cookies.remove("TOKEN", { path: "/" });
-        document.location.reload(true)
+        router.refresh();
     }
 
     const checkCookiesBurger = () => {

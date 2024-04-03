@@ -13,7 +13,6 @@ const Home = () => {
                         style={{ objectFit: "cover" }}
                         src="images/futurePhone.jpg"
                         alt="Futuristic phone image"
-                        fill={true}
                     />
                     <div className="container position-relative">
                         <div className="row position-relative pt-32">
