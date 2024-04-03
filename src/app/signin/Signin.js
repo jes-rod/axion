@@ -7,6 +7,7 @@ import { login } from '../api/api';
 import { useCookies } from 'next-client-cookies';
 import EyeClosed from '@/components/global/EyeClosed';
 import EyeOpen from '@/components/global/EyeOpen';
+import { revalidate } from '../revalidation';
 
 
 
@@ -21,7 +22,13 @@ const Signin = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if(!email){
+        if(cookies.get("TOKEN")){
+            setAlertMessage("You are already logged in. We are redirecting you to your profile's page... ");
+            setTimeout(() => {
+                router.push('/profile');
+            }, 5000);
+            
+        }else if(!email){
             setAlertMessage("Please enter your email address");
         }else if(!password){
             setAlertMessage("Please enter your password");
@@ -29,7 +36,8 @@ const Signin = () => {
             setAlertMessage("");
             const response = await login({email: email, password: password});
             if(response.error){
-                setAlertMessage(response.error.response.data);
+                console.log(response.error);
+                setAlertMessage("Sorry we couldn't log you in, try again after a few minutes");
             }else{
                 cookies.set("TOKEN", response.token, {
                     path: "/",
@@ -37,7 +45,8 @@ const Signin = () => {
                 cookies.set("email", response.email, {
                     path: "/",
                   });
-                  router.refresh();
+                  await revalidate();
+                  router.push('/profile');
             }
         }
     }
