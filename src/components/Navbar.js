@@ -3,12 +3,10 @@
 import React, {useEffect} from 'react';
 import Link from 'next/link';
 import { useCookies } from 'next-client-cookies';
-import { useRouter } from 'next/navigation';
 import { revalidate } from '@/app/revalidation';
 
 const Navbar = () => {
     const cookies = useCookies();
-    const router = useRouter();
     const token = cookies.get("TOKEN");
 
     useEffect(() => {
