@@ -4,6 +4,7 @@ import React, {useEffect} from 'react';
 import Link from 'next/link';
 import { useCookies } from 'next-client-cookies';
 import { useRouter } from 'next/navigation';
+import { revalidate } from '@/app/revalidation';
 
 const Navbar = () => {
     const cookies = useCookies();
@@ -68,9 +69,9 @@ const Navbar = () => {
         }
     }
 
-    const logout = () => {
+    const logout = async () => {
         cookies.remove("TOKEN", { path: "/" });
-        router.refresh();
+        await revalidate();
     }
 
     const checkCookiesBurger = () => {

@@ -62,7 +62,6 @@ const Profile = () => {
 
     useLayoutEffect(() => {
         fetchOrdersProfile();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (

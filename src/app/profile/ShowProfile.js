@@ -4,7 +4,7 @@ const ShowProfile = (props) => {
 
     const user = props.user;
 
-    const handleEdit = (e) => {
+    const handleEdit = () => {
         props.changeEdit(true, true);
     }
 
